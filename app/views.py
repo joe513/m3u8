@@ -47,7 +47,7 @@ class ChannelList(ListView):
     model = Channel
 
     def get_queryset(self):
-        qs = super(ChannelList, self).get_queryset()
+        qs = super(ChannelList, self).get_queryset().filter(playlist__user=self.request.user)
         group = self.request.GET.get('group')
         if group:
             qs = qs.filter(group=group)
