@@ -1,8 +1,18 @@
 {% extends '_base.html' %}
 
+{% load staticfiles %}
+
 {% block content %}
-  <p>Here you can create or edit your m3u8 playlist and view channels online</p>
-  <p>You can also generate unique public link to your playlist,
-    which will be contains updated channels as they are
-    edited on our site.</p>
+  <div class="jumbotron">
+    <h1 class="display-4">Video Playlist Editor</h1>
+    <p class="lead">
+      Here you can create or edit your m3u8 playlist and view channels online
+    </p>
+    <img src="{% static 'app/images/editor.png' %}" class="img-fluid"/>
+    <hr class="my-4">
+    <p>You can also generate private link to your playlist for using with your video player or Smart TV.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="{% url 'create-playlist' %}" role="button">Create Playlist</a>
+    </p>
+  </div>
 {% endblock %}
