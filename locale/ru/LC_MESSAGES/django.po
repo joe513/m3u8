@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-15 18:24+0000\n"
+"POT-Creation-Date: 2018-02-15 18:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,3 +43,35 @@ msgstr "Выход"
 #: templates/_base.html:28
 msgid "Sign Up/Sign In"
 msgstr "Войти/Зарегистрироваться"
+
+#: templates/app/channel_list.html:9
+msgid "Search"
+msgstr "Поиск"
+
+#: templates/app/channel_list.html:12
+msgid "Add new channel to playlist"
+msgstr "Добавить новый канал в плейлисту"
+
+#: templates/app/channel_list.html:14
+msgid "Order by title"
+msgstr "Сортировать по названию"
+
+#: templates/app/index.html:4
+msgid "Here you can create or edit your m3u8 playlist and view channels online"
+msgstr "Здесь вы можете создать или изменить ваш плейлист и посмотреть онлайн каналы"
+
+#: templates/app/index.html:5
+msgid "You can also generate unique public link to your playlist"
+msgstr "Вы так же можете сгенерировать уникальную сыллку к вашему плейлисту"
+
+#: templates/app/index.html:6
+msgid "which will be contains updated channels as they are"
+msgstr "которая будет содержать обновлённые каналы по мере их"
+
+#: templates/app/index.html:7
+msgid "edited on our site."
+msgstr "изменения на нашем сайте"
+
+#: templates/registration/login.html:7
+msgid "Please login, using one of the following provider: "
+msgstr "Пожалуйста войдите с помощью социальной сети."

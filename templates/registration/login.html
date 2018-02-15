@@ -1,10 +1,10 @@
 {% extends '_base.html' %}
-
+{% load i18n %}
 {% block title %}Login{% endblock %}
 
 {% block content %}
   <p>
-    Please login, using one of the following provider: <br/>
+    {% trans "Please login, using one of the following provider: " %}<br/>
   </p>
   <ul>
     <li><a href="{% url "social:begin" "facebook" %}">Facebook</a></li>
