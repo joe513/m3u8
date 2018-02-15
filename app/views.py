@@ -54,7 +54,7 @@ class ChannelList(ListView):
 
         q = self.request.GET.get('q')
         if q:
-            qs = qs.filter(Q(title__icontains=q) | Q (group__icontains=q))
+            qs = qs.filter(Q(title__icontains=q) | Q(group__icontains=q))
 
         order_by = self.request.GET.get('order_by')
         if order_by:

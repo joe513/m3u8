@@ -21,7 +21,8 @@ def virtualenv():
 def deploy():
     with cd(BASE_PATH):
         run('git pull')
-        put('playlist/production.py', os.path.join(BASE_PATH, 'playlist/production.py'))
+        put('playlist/production.py',
+            os.path.join(BASE_PATH, 'playlist/production.py'))
 
         with virtualenv():
             run('pip install -U -r requirements.txt')
