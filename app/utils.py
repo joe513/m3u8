@@ -68,11 +68,14 @@ def load_m3u8_from_file(fo, playlist, remove_existed=False):
         info=fo.name,
         file=fo
     )
+    # Rewind file to start again
+    fo.file.seek(0)
 
     if remove_existed:
         playlist.channels.all().delete()
 
-    duration = title = group = path = None
+    duration = title = group = None
+
     for line in fo.read().splitlines():
         line = line.decode("utf-8")
 
