@@ -1,0 +1,4 @@
+#EXTM3U{% for channel in channels %}
+#EXTINF:{{ channel.duration }},{{ channel.title }}
+{% if channel.group %}#EXTGRP:{{ channel.group }}{% endif %}
+{{ channel.path }}{% endfor %}

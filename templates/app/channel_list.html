@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+
+{% block title %}Channels list{% endblock %}
+
+{% block content %}
+  <a href="{{ public_link }}">Public Playlist link</a>
+  <form>
+    <input name="q" placeholder="Search channel by name" value="{{ request.GET.q }}">
+    <button>Search</button>
+  </form>
+  <hr/>
+  <a href="{% url 'new-channel' %}">Add new channel to playlist</a>
+  <hr/>
+  <a href="?order_by=title">Order by title</a>
+  <br/>
+  <ul>
+    {% for object in object_list %}
+      <li>
+        <a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+        (<a href="?group={{ object.group }}">{{ object.group }}</a>)
+        <a href="{{ object.get_absolute_url }}">Edit/View</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

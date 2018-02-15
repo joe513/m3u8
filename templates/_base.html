@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>{% block title %}M3U8 TV Channels Playlist Editor{% endblock %}</title>
+  <meta name="description"
+        content="Free online m3u, m3u8 playlist editor and server. You can upload, edit and use direct link to your playlist on your Video player (like Kodi, XBMX and etc).">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <header class="masthead">
+    <h3 class="text-muted">Video Playlist Editor</h3>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'channels' %}">Channels list</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'create-playlist' %}">Load m3u8 playlist from web or file</a>
+      </li>
+      {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Sign Up/Sign In</a>
+        </li>
+      {% endif %}
+    </ul>
+  </header>
+  {% block content %}
+  {% endblock %}
+</div> <!-- /container -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-568125-30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-568125-30');
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.idea/
+
+*.sqlite3
+*.pyc
+*.m3u8
+*.m3u
+
+playlist/local.py
+playlist/production.py
+
+notes.txt

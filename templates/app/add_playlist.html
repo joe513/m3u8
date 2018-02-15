@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block title %}Load Playlist{% endblock %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Load">
+  </form>
+{% endblock %}

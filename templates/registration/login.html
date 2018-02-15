@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <p>
+    Please login, using one of the following provider: <br/>
+  </p>
+  <ul>
+    <li><a href="{% url "social:begin" "facebook" %}">Facebook</a></li>
+    <li><a href="{% url "social:begin" "vk-oauth2" %}">VK</a></li>
+  </ul>
+{% endblock %}
