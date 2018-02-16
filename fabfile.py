@@ -8,7 +8,7 @@ env.user = 'root'
 
 BASE_PATH = '/var/django/playlist'
 
-env.activate = 'source ENV/bin/activate'.format(BASE_PATH=BASE_PATH)
+env.activate = 'source ENV/bin/activate'
 
 
 @contextmanager
