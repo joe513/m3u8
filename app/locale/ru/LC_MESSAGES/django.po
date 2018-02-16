@@ -22,7 +22,7 @@ msgstr ""
 
 #: playlist/settings.py:153
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
 
 #: playlist/settings.py:154
 msgid "English"
