@@ -86,7 +86,7 @@ msgid ""
 "    which will be contains updated channels as they are\n"
 "    edited on our site. "
 msgstr "Вы так же можете сгенерировать публичную ссылку к вашему плейлисту"
-"       который будет хранить обновлённые каналы по мере их изменения на нашем сайте"
+"       которая будет хранить обновлённые каналы по мере их изменения на нашем сайте"
 
 #: templates/registration/login.html:3
 msgid "Login"
