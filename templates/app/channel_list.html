@@ -3,7 +3,7 @@
 {% block title %}Channels list{% endblock %}
 {% load i18n %}
 {% block content %}
-  <a href="{{ public_link }}">Public Playlist link</a>
+  <a href="{{ public_link }}">{% trans "Public Playlist link" %}</a>
   <form>
     <input name="q" placeholder="Search channel by name" value="{{ request.GET.q }}">
     <button>{% trans "Search" %}</button>

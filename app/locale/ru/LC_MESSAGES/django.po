@@ -58,8 +58,7 @@ msgstr "Сортировать по названию"
 
 #: templates/app/index.html:4
 msgid "Here you can create or edit your m3u8 playlist and view channels online"
-msgstr ""
-"Здесь вы можете создать или изменить ваш плейлист и посмотреть онлайн каналы"
+msgstr "Здесь вы можете создать или изменить ваш плейлист и посмотреть онлайн каналы"
 
 #: templates/app/index.html:5
 msgid "You can also generate unique public link to your playlist"
