@@ -92,7 +92,3 @@ class CreatePlaylist(FormView):
             )
 
         return super(CreatePlaylist, self).form_valid(form)
-
-
-class IndexView(TemplateView):
-    template_name = 'app/index.html'
