@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from django.utils.translation import gettext_lazy as _
 
 ADMINS = []
 
@@ -22,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'PUT_SECRET_KEY_HERE'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -148,7 +149,6 @@ except ImportError:
     except ImportError:
         pass
 
-from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = [
     ('ru', _('Russian')),

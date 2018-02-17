@@ -1,7 +1,9 @@
 <!doctype html>
+{% load i18n %}
+{% load static %}
 <html lang="en">
 <head>
-    {% load i18n %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}" type="text/css">
   <title>{% block title %}{% trans "M3U8 TV Channels Playlist Editor" %}{% endblock %}</title>
   <meta name="description"
         content="Free online m3u, m3u8 playlist editor and server. You can upload, edit and use direct link to your playlist on your Video player (like Kodi, XBMX and etc).">
@@ -9,6 +11,10 @@
         integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 </head>
 <body>
+<ul class="languagepicker roundborders">
+	<a href="/#/"><li><img src="{% static 'ru.gif' %}">Russian</li></a>
+    <a href="/#"><li><img src="{% static 'fd60km.png' %}">English</li></a>
+</ul>
 <div class="container">
   <header class="masthead">
     <h3 class="text-muted">{% trans "Video Playlist Editor" %}</h3>
