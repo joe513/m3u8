@@ -68,8 +68,7 @@ ROOT_URLCONF = 'playlist.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,18 +133,18 @@ SOCIAL_AUTH_FACEBOOK_KEY = ''
 SOCIAL_AUTH_FACEBOOK_SECRET = ''
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-  'locale': 'en_US',
-  'fields': 'id, name, email'
+    'locale': 'en_US',
+    'fields': 'id, name, email'
 }
 SOCIAL_AUTH_VK_OAUTH2_KEY = ''
 SOCIAL_AUTH_VK_OAUTH2_SECRET = ''
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email', ]
 
 try:
-    from playlist.local import *
+    from playlist.local import *  # noqa
 except ImportError:
     try:
-        from playlist.production import *
+        from playlist.production import *  # noqa
     except ImportError:
         pass
 
